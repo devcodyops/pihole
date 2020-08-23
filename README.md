@@ -10,11 +10,11 @@ accept docker conatiners.
     2. Format SD card into single FAT partition (Disks utility)
     2. restore image to sd card
 3. Prep SD card image with first boot actions
-    3. touch ssh file to sd card system-boot partition to enable ssh
-    3. edit user-data file to set default user password and disable password change
-        "# On first boot, set the (default) ubuntu user's password to "ubuntu" and"
-        "# expire user passwords"
-        chpasswd:
-          expire: false
-          list:
-          - ubuntu:"desired-password"
+  - touch ssh file to sd card system-boot partition to enable ssh
+  - edit user-data file to set default user password and disable password change
+    - "# On first boot, set the (default) ubuntu user's password to "ubuntu" and"
+      "# expire user passwords"
+      chpasswd:
+        expire: false
+        list:
+        - ubuntu:"desired-password"
