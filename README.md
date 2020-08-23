@@ -2,7 +2,7 @@
 code for setting up pihole docker host on raspberry pi ubuntu
 -
 hostprep folder has baseline scripts to automate host setup and make it ready to
-accept docker conatiners.
+accept docker containers.
 
 # Host Image prep using ubuntu
 1. Download ubuntu image from https://ubuntu.com/download/raspberry-pi
@@ -20,7 +20,7 @@ accept docker conatiners.
         list:
         - ubuntu:"desired-password"
       ````
-    - '#Add runcmd line to clone git repo automatically
+    - "#Add runcmd line to clone git repo automatically"
       ````yaml
       runcmd:
         - /usr/bin/repoclone.sh
