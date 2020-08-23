@@ -11,10 +11,17 @@ accept docker conatiners.
   - restore image to sd card
 3. Prep SD card image with first boot actions
   - touch ssh file to sd card system-boot partition to enable ssh
-  - edit user-data file to set default user password and disable password change
+  - edit user-data for cloudint / cloud config first boot actions
     - "# On first boot, set the (default) ubuntu user's password to "ubuntu" and"
       "# expire user passwords"
+      ````yaml
       chpasswd:
         expire: false
         list:
         - ubuntu:"desired-password"
+      ````
+    - '#Add runcmd line to clone git repo automatically
+      ````yaml
+      runcmd:
+        - /usr/bin/repoclone.sh
+      ````
