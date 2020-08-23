@@ -29,11 +29,12 @@ sudo apt -y install docker.io
 #
 #Install Docker Compose
 #
-#sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-#sudo chmod +x /usr/local/bin/docker-compose
-#sudo docker-compose --version
+#Install docker-compose pre-reqs (python3 and pip)
 sudo apt -y install libffi-dev libssl-dev
 sudo apt -y install python3-dev
 sudo apt -y install python3 python3-pip
+#
+#Install docker-compose
+sudo pip3 install docker-compose
 #
 #End pihole docker host prep
