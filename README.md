@@ -24,4 +24,5 @@ accept docker containers.
       ````yaml
       runcmd:
         - /usr/bin/repoclone.sh
+        - [rm, -rf, /usr/bin/repoclone.sh]
       ````
