@@ -10,8 +10,11 @@ accept docker containers.
   - Format SD card into single FAT partition (Disks utility)
   - restore image to sd card
 3. Prep SD card image with first boot actions
-  - touch ssh file to sd card system-boot partition to enable ssh
-  - edit user-data for cloudint / cloud config first boot actions
+  - touch ssh file to sd card system-boot partition to enable ssh (mount partition and change directory)
+    ````yaml
+    touch ssh
+    ````
+  - edit user-data file in system-boot partition for cloudint / cloud config first boot actions
     - "# On first boot, set the (default) ubuntu user's password to "ubuntu" and"
       "# expire user passwords"
       ````yaml
@@ -26,3 +29,11 @@ accept docker containers.
         - /usr/bin/repoclone.sh
         - [rm, -rf, /usr/bin/repoclone.sh]
       ````
+  - copy repoclone.sh script to /usr/bin folder of writable partition of sd card
+    ````yaml
+    ex: cp ~/repoclone.sh /media/devcodyops/writable/usr/bin/repoclone.sh
+    ````
+  - make  script executable
+    ````yaml
+    ex: sudo chmod u+x /media/devcodyops/writable/usr/bin/repoclone.sh
+    ````
