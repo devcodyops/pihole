@@ -8,7 +8,7 @@ accept docker containers.
 1. Download ubuntu image from https://ubuntu.com/download/raspberry-pi
 2. Write Image to SD card
   - Format SD card into single FAT partition (Disks utility)
-  - restore image to sd card
+  - restore image to sd card (Disks Utility)
 3. Prep SD card image with first boot actions
   - touch ssh file to sd card system-boot partition to enable ssh (mount partition and change directory)
     ````yaml

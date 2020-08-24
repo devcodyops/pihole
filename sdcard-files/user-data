@@ -80,3 +80,7 @@ ssh_pwauth: true
 runcmd:
   - /usr/bin/repoclone.sh
   - [ rm, -rf, /usr/bin/repoclone.sh ]
+  - sudo chmod u+x /home/ubuntu/pihole/hostprep/dockerhostprep.sh
+  - sudo chmod u+x /home/ubuntu/pihole/docker/pihole-docker-install.sh
+  - /home/ubuntu/pihole/hostprep/dockerhostprep.sh
+  - /home/ubuntu/pihole/docker/pihole-docker-install.sh
