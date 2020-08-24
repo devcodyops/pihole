@@ -29,11 +29,11 @@ accept docker containers.
         - /usr/bin/repoclone.sh
         - [rm, -rf, /usr/bin/repoclone.sh]
       ````
-  - copy repoclone.sh script to /usr/bin folder of writable partition of sd card
+  - copy repoclone.sh script to /usr/bin folder of writable partition of sd card (found in repo sdcard-files folder)
     ````yaml
     ex: cp ~/repoclone.sh /media/devcodyops/writable/usr/bin/repoclone.sh
     ````
-  - make  script executable
+  - make sd card repoclone script executable
     ````yaml
     ex: sudo chmod u+x /media/devcodyops/writable/usr/bin/repoclone.sh
     ````
