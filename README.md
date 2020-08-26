@@ -1,8 +1,9 @@
 # pihole
 code for setting up pihole docker host on raspberry pi ubuntu
 -
-hostprep folder has baseline scripts to automate host setup and make it ready to
-accept docker containers.
+- hostprep folder has baseline scripts to automate host setup and make it ready to accept docker containers.
+- docker folder has docker-compose yaml config, bash script docker container deployment and email notifcation script.
+- sdcard-files has files and example files that need to be written to the sd card before first boot.
 
 # Host Image prep using ubuntu
 1. Download ubuntu image from https://ubuntu.com/download/raspberry-pi
