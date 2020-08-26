@@ -37,4 +37,8 @@ sudo apt -y install python3 python3-pip
 #Install docker-compose
 sudo pip3 install docker-compose
 #
+#Install ssmtp and mail utils for automated email of provisioning completion
+sudo apt -y install ssmtp mailutils mpack
+sudo mv -f /usr/bin/ssmtp.conf /etc/ssmtp/ssmtp.conf
+#
 #End pihole docker host prep
