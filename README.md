@@ -44,3 +44,13 @@ code for setting up pihole docker host on raspberry pi ubuntu
     ````yaml
     ex: sudo chmod u+x /media/devcodyops/writable/usr/bin/repoclone.sh
     ````
+  - edit ssmtp.conf file and copy to sd card /usr/bin folder if you want email noitification when provisioning is complete (found in repo sd-card-files folder)
+    ````yaml
+    ex: cp ~/ssmtp.conf /media/devcodyops/writable/usr/bin/ssmtp.conf
+    ````
+    udpate the following lines to whatever gmail creds you want the email to be sent to
+    ````yaml
+    AuthUser="Insert Desired gmail account"
+    AuthPass="Insert gmail account password"
+    ````
+  
