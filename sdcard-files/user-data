@@ -85,4 +85,5 @@ runcmd:
   - sudo chmod u+x /home/ubuntu/pihole/docker/notify.sh
   - /home/ubuntu/pihole/hostprep/dockerhostprep.sh
   - /home/ubuntu/pihole/docker/pihole-docker-install.sh
-  - /home/ubuntu/pihole/docker/notify.sh
+  # - /home/ubuntu/pihole/docker/notify.sh
+  - /usr/bin/notify.sh
