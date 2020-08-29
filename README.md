@@ -29,6 +29,12 @@ code for setting up pihole docker host on raspberry pi ubuntu
       runcmd:
         - /usr/bin/repoclone.sh
         - [rm, -rf, /usr/bin/repoclone.sh]
+        - sudo chmod u+x /home/ubuntu/pihole/hostprep/dockerhostprep.sh
+        - sudo chmod u+x /home/ubuntu/pihole/docker/pihole-docker-install.sh
+        - sudo chmod u+x /home/ubuntu/pihole/docker/notify.sh
+        - /home/ubuntu/pihole/hostprep/dockerhostprep.sh
+        - /home/ubuntu/pihole/docker/pihole-docker-install.sh
+        - /home/ubuntu/pihole/docker/notify.sh
       ````
   - copy repoclone.sh script to /usr/bin folder of writable partition of sd card (found in repo sdcard-files folder)
     ````yaml
