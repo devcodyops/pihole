@@ -5,7 +5,9 @@
 #
 #create environment variables (update)
 #
-export webhook_message="pihole server deployed at '$(date +%T)'"
+export webhook_status="'$(sudo docker ps --format "{{.Names}} | {{.Status}}")'"
+export webhook_message="pihole server deployed at '$(date +%T)' with status of $webhook_status"
+#update this webhook_url variable to point it to your desried discord webhook url
 export webhook_url="Insert your Discord Server Channel webhook URL here"
 #
 #make discord notify script executable and run
