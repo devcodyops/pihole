@@ -41,4 +41,10 @@ sudo pip3 install docker-compose
 sudo apt -y install ssmtp mailutils mpack
 sudo mv -f /usr/bin/ssmtp.conf /etc/ssmtp/ssmtp.conf
 #
+#Install curl
+sudo apt -y intsall curl
+#
+#Install sensors
+sudo apt -y install lm-sensors
+#
 #End pihole docker host prep

@@ -31,10 +31,11 @@ code for setting up pihole docker host on raspberry pi ubuntu
         - [rm, -rf, /usr/bin/repoclone.sh]
         - sudo chmod u+x /home/ubuntu/pihole/hostprep/dockerhostprep.sh
         - sudo chmod u+x /home/ubuntu/pihole/docker/pihole-docker-install.sh
-        - sudo chmod u+x /home/ubuntu/pihole/docker/notify.sh
+        - #sudo chmod u+x /home/ubuntu/pihole/docker/notify.sh
         - /home/ubuntu/pihole/hostprep/dockerhostprep.sh
         - /home/ubuntu/pihole/docker/pihole-docker-install.sh
-        - /home/ubuntu/pihole/docker/notify.sh
+        - #/home/ubuntu/pihole/docker/notify.sh
+        - /usr/bin/notify.sh
       ````
   - copy repoclone.sh script to /usr/bin folder of writable partition of sd card (found in repo sdcard-files folder)
     ````yaml
@@ -43,6 +44,10 @@ code for setting up pihole docker host on raspberry pi ubuntu
   - make sd card repoclone script executable
     ````yaml
     ex: sudo chmod u+x /media/devcodyops/writable/usr/bin/repoclone.sh
+    ````
+  - copy notify.sh script to /usr/bin folder of writable partition of sd card (found in repo sdcard-files folder)
+    ````yaml
+    ex: cp ~/notify.sh /media/devcodyops/writable/usr/bin/notify.sh
     ````
   - edit ssmtp.conf file and copy to sd card /usr/bin folder if you want email noitification when provisioning is complete (found in repo sd-card-files folder)
     ````yaml
